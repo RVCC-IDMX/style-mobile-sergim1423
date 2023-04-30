@@ -1,1 +1,89 @@
 /* main */
+@import 'base/reset';
+@import 'base/typography.scss';
+
+//custom properties
+:root {
+    //Font styles
+    --link-font: "Foldit" ;
+    --navbar-font: 'Castoro Titling';
+    --subText-font: "Nunito Sans";
+
+
+    //Font sizes
+    --heading-text: clamp(1.5rem, 4.5vw, 10rem);
+    --subHeading-text: clamp(1rem, 2.5vw, 3rem);
+
+    //Font color
+    --h1-color: hsl(228, 44%, 23%);
+    --h2-color: hsl(229, 74%, 32%);
+    --p-color: hsl(228, 100%, 36%);
+    //Background color
+    --body-background: hsla(0, 0%, 57%, 0);
+    --navbar-background: hsla(0, 0%, 57%, 0.205);
+}
+
+body{
+    font-family: 'Castoro Titling', sans-serif;
+    background-color: var(--body-background);
+    color: var(--h2-color);
+    padding: 6%;
+}
+.skip-link {
+    position: absolute;
+    z-index: -10000;
+    color: var(--body-background);
+}
+    .skip-link:focus {
+        z-index: 10;
+        color: var(--h1-color);
+    } 
+p{
+    font-family: "Nunito Sans";
+    color: var(--p-color);
+    text-align: left;
+}
+h1{
+    font-size: var(--heading-text);
+    color: var(--h1-color);
+    text-align: center;
+}
+h2{
+    font-size: var(--subHeading-text);
+    color: var(--h2-color);
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start ;
+}
+svg{
+    margin-top: 1%;
+    height: max(1.1vw, 15px);
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding: 0;
+    padding: 6%;
+}
+.link-github{
+    display: table;
+    margin: 0 auto;
+    padding-top: 6%;
+}
+span {
+    display: table;
+    margin: 0 auto;
+}
+// header a.link-github {
+//     max-width: 12rem;
+//     margin: 0 auto;
+//     padding: 0.25em 1em;
+//     text-decoration: none;
+//     font-size: --subText-font;
+//     text-align: center;
+// }
